@@ -6,14 +6,14 @@
     <title>mbti</title>
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <header>
-        mbti.
+        <a href="./index.html">mbti.</a>
     </header>
     <main>
-        <p>Методика Д. Кейрси позволяет определить психологический тип личности, в основе которого лежат наиболее устойчивые ее характеристики,
+        <p id="description">Методика Д. Кейрси позволяет определить психологический тип личности, в основе которого лежат наиболее устойчивые ее характеристики,
             обусловленные темпераментом и выражающиеся в типичных способах
             поведения личности в тех или иных ситуациях. Предлагаемый опросник
             включает 70 пар утверждений, имеющих отношение к различным жизненным ситуациям, в которых человек выбирает свой способ поведения,
@@ -22,9 +22,39 @@
         </p>
         <div>
             <img src="./img/3d-flame-naked-man-standing-in-front-of-window-at-night.png" alt="">
-            <a href="#" onclick="startBtn()">Начать</ф>
+            <a href="#" onclick="startBtn()">Начать</a>
         </div>
+
+        <article class="quiz hide" id="quiz">
+            <section class="progress">
+                <div id="test-body">
+                    <p class="number result">Номер вопроса ...</p>
+                </div>
+                <progress max="%max%" value="%step%" id="progress"></progress>
+            </section>
+            <section class="quiz-header" id="quiz-header">
+                <h2 class="question">Загружаем вопрос ...</h2>
+            </section>
+
+            <section class="quiz-list" id="list">
+                <div class="answer-item">
+                    <label>
+                        <input type="radio" class="answer" name="answer">
+                        <span>Ответ ...</span> 
+                    </label>
+                </div>
+                <div class="results">
+                    <div class="result-comntainer">
+                        <h2 class="title">%title%</h2>
+                        <p class="result">%result%</p>
+                    </div>
+                    <h3 class="summary">%message%</h3>
+                </div>
+            </section>
+            <button id="submit" class="green-btn btn test-btn">Далее</button>
+        </article>
     </main>
     <footer></footer>
+    <!-- <script src="./script.js"></script> -->
 </body>
 </html>

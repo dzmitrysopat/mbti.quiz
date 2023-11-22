@@ -42,9 +42,11 @@ main{
     font-size: 22px;
     /* font-weight: 700; */
     display: flex;
+    /* flex-wrap: wrap-reverse; */
     gap: 100px;
     align-items: center;
     justify-self: center;
+    justify-content: center;
 }
 
 main > p{
@@ -63,6 +65,8 @@ main > p{
 
 div{
     display: flex;
+    justify-content: center;
+    /* align-items: center; */
     flex-direction: column;
     gap: 20px;
 }
@@ -75,4 +79,18 @@ div > a{
     border: 2px solid #658bb5;
     padding: 15px 100px;
     border-radius: 50px;
+    transition: all .4s;
+}
+
+a:hover{
+    background-color: inherit;
+}
+
+.hide{
+    display: none;
+}
+
+#list{
+    display: flex;
+    flex-direction: column;
 }
