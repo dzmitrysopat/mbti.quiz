@@ -56,17 +56,23 @@ main > p{
     -webkit-backdrop-filter: blur(4.9px);
 }
 
+::selection{
+    background-color: #658bb5;
+    color: #fafafa;
+}
+
 div{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-div > button{
+div > a{
+    text-align: center;
     font-size: 25px;
     color: aliceblue;
-    background-color: #051948;
-    border: 2px solid #051948;
-    padding: 20px 80px;
+    background-color: #658bb5;
+    border: 2px solid #658bb5;
+    padding: 15px 100px;
     border-radius: 50px;
 }
