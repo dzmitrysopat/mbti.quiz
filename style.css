@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+*{
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: #383838;
+    padding: 0;
+    margin: 0;
+    /* outline: 2px solid lightgreen; */
+}
+
+body{
+    background-color: #9e9e9e;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    gap: 150px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0 auto;
+    overflow-x: hidden;
+    background: linear-gradient(90deg, #020024 0%, rgba(233,30,30,1) 0%, rgba(214,121,215,1) 48%, rgba(255,162,0,1) 100%);}
+
+header{
+    margin: 0 auto;
+    padding: 20px 0;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+main{
+    max-width: 1100px;
+    flex: 1;
+    text-align: justify;
+    font-size: 22px;
+    /* font-weight: 700; */
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    justify-self: center;
+}
+
+main > p{
+    padding: 25px 50px;
+    background: rgba(255, 255, 255, 0.32);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+div > button{
+    font-size: 25px;
+    color: aliceblue;
+    background-color: #051948;
+    border: 2px solid #051948;
+    padding: 20px 80px;
+    border-radius: 50px;
+}
