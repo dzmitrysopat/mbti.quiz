@@ -45,13 +45,13 @@ header > a:hover{
 }
 
 main{
-    max-width: 1100px;
+    /* max-width: 1100px; */
     flex: 1;
     text-align: justify;
     font-size: 22px;
     /* font-weight: 700; */
     display: flex;
-    /* flex-wrap: wrap-reverse; */
+    flex-wrap: wrap-reverse;
     gap: 100px;
     align-items: center;
     justify-self: center;
@@ -59,6 +59,7 @@ main{
 }
 
 main > p{
+    max-width: 600px;
     padding: 25px 50px;
     background: rgba(255, 255, 255, 0.32);
     border-radius: 16px;
