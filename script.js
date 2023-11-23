@@ -365,15 +365,7 @@ const submitBtn = document.querySelector('#submit');
 const progressContainer = document.querySelector('#progress');
 
 let score = 0;
-let score1 = 0;
-let score2 = 0;
-let score3 = 0;
 let questionIndex = 0;
-
-console.log(score);
-console.log(score1);
-console.log(score2);
-console.log(score3);
 
 clearPage();
 showQuestion();
@@ -455,45 +447,32 @@ function checkAnswer(){
     // Если ответ верный - увеличиваем счет
     questions[questionIndex]['correct']
 
-
-    if (questionIndex == 0 || questionIndex == 7 ||questionIndex == 14 || questionIndex == 21 ||questionIndex == 28 || questionIndex == 35 ||questionIndex == 42 || questionIndex == 49 || questionIndex == 56 || questionIndex == 63){
+    for (i = 0; i<=questionIndex; i = i+7){
         if (userAnswer === questions[questionIndex]['correct']){
-        // console.log(userAnswer);
-        score++;
-    }
-    }
-    else if (questionIndex == 1 || questionIndex == 8 ||questionIndex == 15 || questionIndex == 22 ||questionIndex == 29 || questionIndex == 36 ||questionIndex == 43 || questionIndex == 50 || questionIndex == 57 || questionIndex == 64 ||questionIndex == 2 || questionIndex == 9 ||questionIndex == 16 || questionIndex == 23 ||questionIndex == 30 || questionIndex == 37 ||questionIndex == 44 || questionIndex == 51 || questionIndex == 58 || questionIndex == 65){
-        if (userAnswer === questions[questionIndex]['correct']){
-        // console.log(userAnswer);
-        score1++;
-        }
-    }
-    else if (questionIndex == 3 || questionIndex == 10 ||questionIndex == 17 || questionIndex == 24 ||questionIndex == 31 || questionIndex == 38 ||questionIndex == 45 || questionIndex == 52 || questionIndex == 59 || questionIndex == 66 ||questionIndex == 4 || questionIndex == 11 ||questionIndex == 18 || questionIndex == 25 ||questionIndex == 32 || questionIndex == 39 ||questionIndex == 46 || questionIndex == 53 || questionIndex == 60 || questionIndex == 67){
-        if (userAnswer === questions[questionIndex]['correct']){
-        // console.log(userAnswer);
-        score2++;
-        }
-    }
-    else if (questionIndex == 5 || questionIndex == 12 ||questionIndex == 19 || questionIndex == 26 ||questionIndex == 33 || questionIndex == 40 ||questionIndex == 47 || questionIndex == 54 || questionIndex == 61 || questionIndex == 68 ||questionIndex == 6 || questionIndex == 13 ||questionIndex == 20 || questionIndex == 27 ||questionIndex == 34 || questionIndex == 41 ||questionIndex == 48 || questionIndex == 55 || questionIndex == 62 || questionIndex == 69){
-        if (userAnswer === questions[questionIndex]['correct']){
-        // console.log(userAnswer);
-        score3++;
-        }
+            score = score + 1;
     }
     console.log(score);
-    console.log(score1);
-    console.log(score2);
-    console.log(score3);
-}
-    // if (questionIndex == 0 || questionIndex == 3 || questionIndex == 6 || questionIndex == 9 || questionIndex == 12 || questionIndex == 15 || questionIndex == 18){
-    //     score = score + (userAnswer - 1);
-    // } else if (questionIndex == 1 || questionIndex == 4 || questionIndex == 7 || questionIndex == 10 || questionIndex == 13 || questionIndex == 16 || questionIndex == 19) {
-    //     score1 = score1 + (userAnswer - 1);
-    // } else if (questionIndex == 2 || questionIndex == 5 || questionIndex == 8 || questionIndex == 11 || questionIndex == 14 || questionIndex == 17 || questionIndex == 20) {
-    //     score2 = score2 + (userAnswer - 1);
+    console.log(i);
+    }
+    // else if (questionIndex == 1 || questionIndex == 8 ||questionIndex == 15 || questionIndex == 22 ||questionIndex == 29 || questionIndex == 36 ||questionIndex == 43 || questionIndex == 50 || questionIndex == 57 || questionIndex == 64 ||questionIndex == 2 || questionIndex == 9 ||questionIndex == 16 || questionIndex == 23 ||questionIndex == 30 || questionIndex == 37 ||questionIndex == 44 || questionIndex == 51 || questionIndex == 58 || questionIndex == 65){
+    //     if (userAnswer1 === questions[questionIndex]['correct']){
+    //     score1 = score1 + 1;
+    //     }
     // }
+    // else if (questionIndex == 3 || questionIndex == 10 ||questionIndex == 17 || questionIndex == 24 ||questionIndex == 31 || questionIndex == 38 ||questionIndex == 45 || questionIndex == 52 || questionIndex == 59 || questionIndex == 66 ||questionIndex == 4 || questionIndex == 11 ||questionIndex == 18 || questionIndex == 25 ||questionIndex == 32 || questionIndex == 39 ||questionIndex == 46 || questionIndex == 53 || questionIndex == 60 || questionIndex == 67){
+    //     if (userAnswer2 === questions[questionIndex]['correct']){
+    //     score2 = score2 + 1;
+    //     }
+    // }
+    // else if (questionIndex == 5 || questionIndex == 12 ||questionIndex == 19 || questionIndex == 26 ||questionIndex == 33 || questionIndex == 40 ||questionIndex == 47 || questionIndex == 54 || questionIndex == 61 || questionIndex == 68 ||questionIndex == 6 || questionIndex == 13 ||questionIndex == 20 || questionIndex == 27 ||questionIndex == 34 || questionIndex == 41 ||questionIndex == 48 || questionIndex == 55 || questionIndex == 62 || questionIndex == 69){
+    //     if (userAnswer3 === questions[questionIndex]['correct']){
+    //     // console.log(userAnswer);
+    //     score3 = score3 + 1;
+    //     }
+    // }
+    console.log('score =', score);
 
-    // console.log('score = ', score);
+
 
     if (questionIndex !== questions.length - 1){
         // console.log('Это не последний вопрос');
@@ -505,6 +484,7 @@ function checkAnswer(){
         clearPage();
         showResults();
     }
+}
 
 function showResults (){
     // console.log('showResults start');
