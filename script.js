@@ -378,7 +378,7 @@ function checkAnswer(){
     // Если ответ верный - увеличиваем счет
     // questions[questionIndex]['answers']
     // if (userAnswer === questions[questionIndex]['answers']){
-        score = score + userAnswer;
+        // score = score + userAnswer;
     // }
 
     // console.log('score = ', score);
