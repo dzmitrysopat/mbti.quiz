@@ -373,6 +373,15 @@ let scoreF = 0;
 let scoreJ = 0;
 let scoreP = 0;
 let questionIndex = 0;
+let resultE = 'E';
+let resultI = 'I';
+let resultS = 'S';
+let resultN = 'N';
+let resultT = 'T';
+let resultF = 'F';
+let resultJ = 'J';
+let resultP = 'P';
+let result = '';
 
 clearPage();
 showQuestion();
@@ -449,7 +458,7 @@ function checkAnswer(){
     }
 
     const userAnswer = parseInt(checkedRadio.value);
-    console.log(parseInt(checkedRadio.value));
+    // console.log(parseInt(checkedRadio.value));
     // Если ответ верный - увеличиваем счет
     questions[questionIndex]['correct']
     
@@ -490,25 +499,34 @@ function checkAnswer(){
 
     if(scoreE > scoreI ){
         console.log('E');
+        result = result + resultE;
     } else{
         console.log('I');
+        result = result + resultI;
     }
     if(scoreS > scoreN ){
         console.log('S');
+        result = result + resultS;
     } else{
         console.log('N');
+        result = result + resultN;
     }
     if(scoreT > scoreF ){
         console.log('T');
+        result = result + resultT;
     } else{
         console.log('F');
+        result = result + resultF;
     }
     if(scoreJ > scoreP ){
         console.log('J');
+        result = result + resultJ;
     } else{
         console.log('P');
+        result = result + resultP;
     }
 
+    console.log(result);
 
     // узнаем номер ответа пользователя
     // console.log(questions[questionIndex]['answers'][1]);
