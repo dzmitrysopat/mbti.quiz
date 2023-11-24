@@ -465,6 +465,18 @@ function checkAnswer(){
         } else{
             scoreN++;
         }
+    } else if (questionIndex == 3 || questionIndex == 10 ||questionIndex == 17 || questionIndex == 24 ||questionIndex == 31 || questionIndex == 38 ||questionIndex == 45 || questionIndex == 52 ||questionIndex == 59 || questionIndex == 66 ||questionIndex == 4 || questionIndex == 11 ||questionIndex == 18 || questionIndex == 25 ||questionIndex == 32 || questionIndex == 39 ||questionIndex == 46 || questionIndex == 53 ||questionIndex == 60 || questionIndex == 67){
+        if (userAnswer === questions[questionIndex]['correct']){
+            scoreT++;
+        } else{
+            scoreF++;
+        }
+    } else if (questionIndex == 5 || questionIndex == 12 ||questionIndex == 19 || questionIndex == 26 ||questionIndex == 33 || questionIndex == 40 ||questionIndex == 47 || questionIndex == 54 ||questionIndex == 61 || questionIndex == 68 ||questionIndex == 6 || questionIndex == 13 ||questionIndex == 20 || questionIndex == 27 ||questionIndex == 34 || questionIndex == 41 ||questionIndex == 48 || questionIndex == 55 ||questionIndex == 62 || questionIndex == 69){
+        if (userAnswer === questions[questionIndex]['correct']){
+            scoreJ++;
+        } else{
+            scoreP++;
+        }
     }
 
     
@@ -473,6 +485,10 @@ function checkAnswer(){
     console.log('scoreI = ', scoreI);
     console.log('scoreS = ', scoreS);
     console.log('scoreN = ', scoreN);
+    console.log('scoreT = ', scoreT);
+    console.log('scoreF = ', scoreF);
+    console.log('scoreJ = ', scoreJ);
+    console.log('scoreP = ', scoreP);
 
 
     // узнаем номер ответа пользователя
