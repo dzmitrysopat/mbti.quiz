@@ -527,6 +527,7 @@ function checkAnswer(){
     }
 
     console.log(result);
+    console.log(result.at(-5));
 
     // узнаем номер ответа пользователя
     // console.log(questions[questionIndex]['answers'][1]);
