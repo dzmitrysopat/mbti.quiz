@@ -365,7 +365,13 @@ const submitBtn = document.querySelector('#submit');
 const progressContainer = document.querySelector('#progress');
 
 let scoreE = 0;
+let scoreI = 0;
 let scoreS = 0;
+let scoreN = 0;
+let scoreT = 0;
+let scoreF = 0;
+let scoreJ = 0;
+let scoreP = 0;
 let questionIndex = 0;
 
 clearPage();
@@ -450,17 +456,24 @@ function checkAnswer(){
     if (questionIndex == 0 || questionIndex == 7 ||questionIndex == 14 || questionIndex == 21 ||questionIndex == 28 || questionIndex == 35 ||questionIndex == 42 || questionIndex == 49 ||questionIndex == 56 || questionIndex == 63){
         if (userAnswer === questions[questionIndex]['correct']){
             scoreE++;
-        }
-    } else if (questionIndex == 1 || questionIndex == 8 ||questionIndex == 15 || questionIndex == 22 ||questionIndex == 29 || questionIndex == 36 ||questionIndex == 43 || questionIndex == 50 ||questionIndex == 57 || questionIndex == 64){
+        }else{
+            scoreI++;
+        };
+    } else if (questionIndex == 1 || questionIndex == 8 ||questionIndex == 15 || questionIndex == 22 ||questionIndex == 29 || questionIndex == 36 ||questionIndex == 43 || questionIndex == 50 ||questionIndex == 57 || questionIndex == 64 ||questionIndex == 2 || questionIndex == 9 ||questionIndex == 16 || questionIndex == 23 ||questionIndex == 30 || questionIndex == 37 ||questionIndex == 44 || questionIndex == 51 ||questionIndex == 58 || questionIndex == 65){
         if (userAnswer === questions[questionIndex]['correct']){
             scoreS++;
+        } else{
+            scoreN++;
         }
     }
 
     
 
     console.log('scoreE = ', scoreE);
+    console.log('scoreI = ', scoreI);
     console.log('scoreS = ', scoreS);
+    console.log('scoreN = ', scoreN);
+
 
     // узнаем номер ответа пользователя
     // console.log(questions[questionIndex]['answers'][1]);
