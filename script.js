@@ -477,9 +477,7 @@ function checkAnswer(){
         } else{
             scoreP++;
         }
-    }
-
-    
+    };
 
     console.log('scoreE = ', scoreE);
     console.log('scoreI = ', scoreI);
@@ -489,6 +487,27 @@ function checkAnswer(){
     console.log('scoreF = ', scoreF);
     console.log('scoreJ = ', scoreJ);
     console.log('scoreP = ', scoreP);
+
+    if(scoreE > scoreI ){
+        console.log('E');
+    } else{
+        console.log('I');
+    }
+    if(scoreS > scoreN ){
+        console.log('S');
+    } else{
+        console.log('N');
+    }
+    if(scoreT > scoreF ){
+        console.log('T');
+    } else{
+        console.log('F');
+    }
+    if(scoreJ > scoreP ){
+        console.log('J');
+    } else{
+        console.log('P');
+    }
 
 
     // узнаем номер ответа пользователя
