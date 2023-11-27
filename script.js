@@ -527,8 +527,10 @@ function checkAnswer(){
     }
 
     console.log(result);
-    console.log(result.at(-5));
-
+    const n = 4;
+    let final = result.substring(result.length - n);
+    // console.table(result.at(-5));
+    console.log(final);
     // узнаем номер ответа пользователя
     // console.log(questions[questionIndex]['answers'][1]);
     
