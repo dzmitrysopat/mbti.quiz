@@ -383,6 +383,9 @@ let resultJ = 'J';
 let resultP = 'P';
 let result = '';
 
+let ESFP = 'ESFP';
+
+
 clearPage();
 showQuestion();
 
@@ -526,11 +529,16 @@ function checkAnswer(){
         result = result + resultP;
     }
 
-    console.log(result);
+    // console.log(result);
     const n = 4;
     let final = result.substring(result.length - n);
     // console.table(result.at(-5));
     console.log(final);
+    if (final == 'INFP'){
+        console.log('error');
+    }else{
+        console.log('INFP');
+    }
     // узнаем номер ответа пользователя
     // console.log(questions[questionIndex]['answers'][1]);
     
@@ -564,18 +572,44 @@ function showResults (){
 
     let title, message, result;
 
-    if (score <= 99){
-        title = 'Ваш результат:';
-        result = 'меньше 99 баллов'
-        message = 'У Вас низкий уровень стресса!';
-    } else if (score >= 100 && score <= 125){
-        title = 'Ваш результат:';
-        result = 'от 100 до 125 баллов'
-        message = 'У Вас средний уровень стресса!';
-    } else if (score >= 125){
-        title = 'Ваш результат:';
-        result = 'более 125 баллов'
-        message = 'У Вас высокий уровень стресса!';
+    // if (score <= 99){
+    //     title = 'Ваш результат:';
+    //     result = 'меньше 99 баллов'
+    //     message = 'У Вас низкий уровень стресса!';
+    // } else if (score >= 100 && score <= 125){
+    //     title = 'Ваш результат:';
+    //     result = 'от 100 до 125 баллов'
+    //     message = 'У Вас средний уровень стресса!';
+    // } else if (score >= 125){
+    //     title = 'Ваш результат:';
+    //     result = 'более 125 баллов'
+    //     message = 'У Вас высокий уровень стресса!';
+    // }
+
+    if (final == 'ESFP'){
+        title = 'Ваш тип личности: ESFP';
+        result = 'Тамада';
+        message = 'Основной чертой ESFP является стремление к свободе, оптимизм, причем это стремление настолько открыто окружающим, что иногда производит впечатление игры, демонстративного поведения или наивности.В отношениях с людьми ESFP свойственна открытость, теплота, душевность, корректность. Практически все ESFP являются прекрасными собеседниками, довольно веселыми, добродушными и остроумными людьми.';
+    } else if (final == 'ISFP'){
+        title = 'Ваш тип личности: ISFP';
+        result = '';
+        message = '';
+    } else if (final == 'ESTP'){
+        title = 'Ваш тип личности: ESTP';
+        result = '';
+        message = '';
+    } else if (final == 'ISTP'){
+        title = 'Ваш тип личности: ISTP';
+        result = '';
+        message = '';
+    } else if (final == 'ESFJ'){
+        title = 'Ваш тип личности: ESFJ';
+        result = '';
+        message = '';
+    } else if (final == 'ISFJ'){
+        title = 'Ваш тип личности: ISFJ';
+        result = '';
+        message = '';
     }
 
     // Result
