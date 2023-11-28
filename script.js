@@ -392,15 +392,12 @@ showQuestion();
 
 submitBtn.onclick = checkAnswer;
 
-function prevQuestion(){
-        questionIndex--;
-       clearPage();
-       showQuestion();
-}
+// function prevQuestion(){
+//         questionIndex--;
+//         clearPage();
+//         showQuestion();
+// }
 
-if (questionIndex != 0){
-    
-}
 
 function clearPage(){
     headerContainer.innerHTML = '';
@@ -449,11 +446,11 @@ function showQuestion(){
         answerNumber++;
     }
 
-    if(step != 1){
-        document.getElementById("back").classList.remove("hide");
-    }else{
-        document.getElementById("back").classList.add("hide");
-    }
+    // if(step != 1){
+    //     document.getElementById("back").classList.remove("hide");
+    // }else{
+    //     document.getElementById("back").classList.add("hide");
+    // }
 } 
 
 function checkAnswer(){   
@@ -508,31 +505,31 @@ function checkAnswer(){
     console.log('scoreP = ', scoreP);
 
     if(scoreE > scoreI ){
-        console.log('E');
+        // console.log('E');
         result = result + resultE;
     } else{
-        console.log('I');
+        // console.log('I');
         result = result + resultI;
     }
     if(scoreS > scoreN ){
-        console.log('S');
+        // console.log('S');
         result = result + resultS;
     } else{
-        console.log('N');
+        // console.log('N');
         result = result + resultN;
     }
     if(scoreT > scoreF ){
-        console.log('T');
+        // console.log('T');
         result = result + resultT;
     } else{
-        console.log('F');
+        // console.log('F');
         result = result + resultF;
     }
     if(scoreJ > scoreP ){
-        console.log('J');
+        // console.log('J');
         result = result + resultJ;
     } else{
-        console.log('P');
+        // console.log('P');
         result = result + resultP;
     }
 
