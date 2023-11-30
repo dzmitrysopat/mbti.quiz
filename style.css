@@ -271,5 +271,9 @@ span.answer-description::after{
     span.answer-description{
         width: 70vw;
     }
+
+    #quiz{
+        padding: 15px;
+    }
 }
 
