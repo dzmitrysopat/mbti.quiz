@@ -155,7 +155,7 @@ span,.title, .result,.question{
 }
 
 #quiz{
-    padding: 100px 50px;
+    padding: 50px 50px;
     border-radius: 50px;
     /* border: 2px solid #fafafa; */
     background: rgba(255, 255, 255, 0.28);
@@ -191,8 +191,9 @@ h3.summary{
 label{
     padding: 10px;
     transition: all .3s;
-    border-radius: 8px;
+    border-radius: 18px;
     display: flex;
+    /* align-items: center; */
     cursor: pointer;
 } 
 
@@ -217,7 +218,7 @@ span.answer-description{
     display: inline-flex;
     align-items: center;
     position: relative;
-    width: 30vw;
+    width: 35vw;
 }
 
 span.answer-description::before{
