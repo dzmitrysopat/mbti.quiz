@@ -258,6 +258,10 @@ span.answer-description::after{
         text-align: start;
     }
 
+    section > p{
+        text-align: justify;
+    }
+
     body{
         gap: 25px;
     }
