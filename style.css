@@ -201,6 +201,11 @@ label{
     cursor: pointer;
 } 
 
+span.answer-description{
+    align-self: center;
+    justify-self: center;
+}
+
 label:first-child{
     margin-bottom: 15px;
 }
@@ -234,8 +239,8 @@ span.answer-description::before{
     opacity: 0.85;
     border-radius: 50%;
     margin-right: 10px;
-    margin-top: -4px;
-    /* align-self: flex-start; */
+    /* margin-top: -4px; */
+    align-self: flex-start;
 }
 
 span.answer-description::after{
@@ -246,3 +251,25 @@ span.answer-description::after{
     content: url('../img/check-input.svg');
     transform: scale(0);
 }
+
+@media screen and (max-width:900px){
+    main{
+        padding: 25px;
+        text-align: start;
+    }
+
+    body{
+        gap: 25px;
+    }
+
+    .progress{
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 90vw;
+    }
+
+    span.answer-description{
+        width: 70vw;
+    }
+}
+
