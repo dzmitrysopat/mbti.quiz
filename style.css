@@ -154,6 +154,10 @@ span,.title, .result,.question{
     color: #383838;
 }
 
+.result{
+    font-weight: 700;
+}
+
 #quiz{
     padding: 50px 50px;
     border-radius: 50px;
@@ -214,7 +218,7 @@ label:hover{
 }
 
 span.answer-description{
-    margin-right: 25px;
+    /* margin-right: 25px; */
     display: inline-flex;
     align-items: center;
     position: relative;
@@ -230,7 +234,8 @@ span.answer-description::before{
     opacity: 0.85;
     border-radius: 50%;
     margin-right: 10px;
-    align-self: flex-start;
+    margin-top: -4px;
+    /* align-self: flex-start; */
 }
 
 span.answer-description::after{
