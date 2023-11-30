@@ -22,8 +22,7 @@ body{
     flex: 1;
     margin: 0 auto;
     overflow-x: hidden;
-    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(77,30,233,1) 0%, rgba(0,179,18,1) 56%, rgba(255,162,0,1) 100%); */
-    background: url('./img/back13.jpg') no-repeat center center fixed;
+    background: url('./img/wallhaven-z8dg9y.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -46,11 +45,13 @@ header > a:hover{
 }
 
 main{
-    /* max-width: 1100px; */
+    font-size: 22px;
     flex: 1;
     text-align: justify;
-    font-size: 22px;
-    /* font-weight: 700; */
+}
+
+.first-screen{
+    /* max-width: 1100px; */
     display: flex;
     flex-wrap: wrap-reverse;
     gap: 100px;
@@ -59,7 +60,8 @@ main{
     justify-content: center;
 }
 
-main > p{
+
+.first-screen > p{
     max-width: 600px;
     padding: 25px 50px;
     background: rgba(255, 255, 255, 0.32);
@@ -73,21 +75,21 @@ main > p{
 }
 
 ::selection{
-    background-color: #4037c5;
+    background-color: #1474a1;
     color: #fafafa;
 }
 
 div{
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     flex-direction: column;
     gap: 20px;
 }
 
 div > a,
 button{
-text-align: center;
+    cursor: pointer;
+    text-align: center;
     font-size: 25px;
     padding: 15px 100px;
     border-radius: 50px;
@@ -97,14 +99,20 @@ text-align: center;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
-    /* border: 1px solid #383838; */
+    border: 2px solid #ffffff47;
 }
 
-a:hover{
+div > a:hover{
     /* background-color: inherit; */
-/* border: 1px solid #fafafa; */
-color: #fafafa;
-scale: 1.05;
+    border: 2px solid #fafafa;
+    color: #fafafa;
+    scale: 1.01;
+}
+
+button:hover{
+    /* background-color: inherit; */
+border: 2px solid #fafafa;
+/* scale: 1.02; */
 }
 
 .hide{
@@ -131,7 +139,10 @@ progress{
 }
 
 progress::-webkit-progress-bar { 
-    background:  #fffb00; 
+    background: rgba(255, 255, 255, 0.28);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
     border-radius: 25px;
 } 
 progress::-webkit-progress-value {
@@ -140,14 +151,23 @@ progress::-webkit-progress-value {
 }
 
 span,.title, .result,.question{
-    color: #fafafa;
+    color: #383838;
 }
 
 #quiz{
+    padding: 100px 50px;
+    border-radius: 50px;
+    /* border: 2px solid #fafafa; */
+    background: rgba(255, 255, 255, 0.28);
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
     display: flex;
     flex-direction: column;
     gap: 25px;
-}
+    -webkit-box-shadow: 15px 15px 10px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 15px 15px 10px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 15px 15px 10px 0px rgba(34, 60, 80, 0.2);}
 
 .result-container{
     align-items: center;
@@ -166,4 +186,57 @@ h3.summary{
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.9px);
     -webkit-backdrop-filter: blur(4.9px);
+}
+
+label{
+    padding: 10px;
+    transition: all .3s;
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+} 
+
+label:first-child{
+    margin-bottom: 15px;
+}
+
+label:hover{
+    background-color: #1474a16e;
+}
+
+[type="radio"]{
+    display: none;
+}
+
+[type="radio"]:checked + span.answer-description::after{
+    transform: scale(1);
+}
+
+span.answer-description{
+    margin-right: 25px;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    width: 30vw;
+}
+
+span.answer-description::before{
+    content: '';
+    flex: 0 0 25px;
+    height: 25px;
+    background-color: #fff;
+    border: 2px solid #1474a1;
+    opacity: 0.85;
+    border-radius: 50%;
+    margin-right: 10px;
+    align-self: flex-start;
+}
+
+span.answer-description::after{
+    transition: all ease-out 0.1s;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    content: url('../img/check-input.svg');
+    transform: scale(0);
 }
