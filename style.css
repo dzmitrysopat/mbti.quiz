@@ -6,7 +6,7 @@
     color: #383838;
     padding: 0;
     margin: 0;
-    outline: 2px solid lightgreen;
+    /* outline: 2px solid lightgreen; */
 }
 
 html {
@@ -323,7 +323,7 @@ span.answer-description::after{
     .results{
         padding: 15px;
     }
-    
+
     div > a{
         width: 40vw;
     }
