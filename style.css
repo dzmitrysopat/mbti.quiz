@@ -30,6 +30,25 @@ body{
     background-size: cover;
 }
 
+.body_hide {
+	opacity: 0;
+	transition: 2s opacity ease-in-out;
+}
+.body_visible {
+	opacity: 1;
+}
+
+.element-animation {
+    opacity: 0;
+    transform: translateY(15%);
+}
+
+.element-animation.element-show {
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateY(0%);
+}
+
 header{
     margin: 0 auto;
     padding: 20px 0;
@@ -166,9 +185,7 @@ span,.title, .result,.question{
 #quiz{
     padding: 50px 50px;
     border-radius: 50px;
-    /* border: 2px solid #fafafa; */
     background: rgba(255, 255, 255, 0.28);
-    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
     display: flex;
@@ -202,7 +219,6 @@ label{
     transition: all .3s;
     border-radius: 18px;
     display: flex;
-    /* align-items: center; */
     cursor: pointer;
 } 
 
@@ -228,7 +244,6 @@ label:hover{
 }
 
 span.answer-description{
-    /* margin-right: 25px; */
     display: inline-flex;
     align-items: center;
     position: relative;
@@ -244,7 +259,7 @@ span.answer-description::before{
     opacity: 0.85;
     border-radius: 50%;
     margin-right: 10px;
-    /* margin-top: -4px; */
+
     align-self: flex-start;
 }
 
@@ -261,6 +276,14 @@ span.answer-description::after{
     main{
         padding: 25px;
         text-align: start;
+    }
+
+    h2.question{
+        font-size: 1.5rem;
+    }
+
+    span{
+        font-size: 1.2rem;
     }
 
     section > p,

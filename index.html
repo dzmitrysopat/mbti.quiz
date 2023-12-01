@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
 </head>
-<body>
+<body class="body_hide">
     <header>
         <a href="./index.html">mbti.</a>
     </header>
     <main>
-        <section class="first-screen">
+        <section class="first-screen element-animation">
             <p id="description">Методика Д. Кейрси позволяет определить психологический тип личности, в основе которого лежат наиболее устойчивые ее характеристики,
                 обусловленные темпераментом и выражающиеся в типичных способах
                 поведения личности в тех или иных ситуациях. Предлагаемый опросник
@@ -27,7 +27,7 @@
             </div>
         </section>
 
-        <article class="quiz hide" id="quiz">
+        <article class="quiz hide element-animation" id="quiz">
             <section class="progress">
                 <div id="test-body">
                     <p class="number result">Номер вопроса ...</p>
@@ -38,14 +38,14 @@
                 <h2 class="question">Загружаем вопрос ...</h2>
             </section>
 
-            <section class="quiz-list" id="list">
+            <section class="quiz-list element-animation" id="list">
                 <div class="answer-item">
                     <label>
                         <input type="radio" class="answer" name="answer">
                         <span>Ответ ...</span> 
                     </label>
                 </div>
-                <div class="results">
+                <div class="results element-animation">
                     <div class="result-container">
                         <h2 class="title">%title%</h2>
                         <p class="result">%result%</p>
