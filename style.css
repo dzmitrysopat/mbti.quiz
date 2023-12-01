@@ -253,7 +253,7 @@ span.answer-description::after{
     position: absolute;
     top: -2px;
     left: -2px;
-    content: url('../img/check-input.svg');
+    content: url('./img/check-input.svg');
     transform: scale(0);
 }
 
